@@ -1,1 +1,16 @@
-{}
+{
+  "theme": {
+      "slug": "gregersenfamilychiropractic",
+      "name": "Gregersen Family Chiropractic",
+      "author": "Daniel Bisett",
+      "PHPNamespace": "WP_Rig\\WP_Rig"
+    },
+    "dev": {
+      "browserSync": {
+        "live": true,
+        "proxyURL": "gregersen:8888",
+        "bypassPort": "8189",
+        "https": false
+      }
+}
+}
