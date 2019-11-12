@@ -1,0 +1,78 @@
+.block1 {
+    background: rgba(0,0,0,.8);
+    padding: 2rem;
+    color: #f7f7f7;
+    margin-top: 4rem;
+
+    & h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-align: center;
+        border-bottom: solid #f7931e;
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        @media (--narrow-menu-query) {
+            font-size: 1.5rem;
+            width: 90%;
+        }
+    }
+    & .contentBlocks {
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin: 1rem 20vw;
+
+
+    @media (--narrow-menu-query) {
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+
+        & ul:nth-child(2) {
+            margin-top: -2.5rem;
+        }
+    }
+    }
+    & p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+    }
+
+    & button {
+        border: 1px solid #f7931e;
+        border-radius: 1rem;
+        width: 30vw;
+        margin-left: 33vw;
+        margin-right: auto;
+        line-height: 1rem;
+        text-align: center;
+        font-feature-settings: "smcp" 1;
+        font-variant-caps: all-small-caps;
+        margin-bottom: 0;
+        background: #f7931e;
+        color: #f7f7f7;
+        font-size: 1.2rem;
+        padding-bottom: 0.8em;
+        margin-top: 4rem;
+
+        & a {
+            text-decoration: none;
+            color: #f7f7f7;
+        }
+    }
+
+    @media (--narrow-menu-query) {
+        margin-top: -4rem;
+    & ul {
+        margin-left: 0;
+}
+    & button {
+        width: 80vw;
+        margin: 4rem auto 0 auto;
+    }
+
+    }
+}

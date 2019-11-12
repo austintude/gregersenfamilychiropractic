@@ -1,0 +1,88 @@
+.block2 {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 1rem 5vw;
+    background: rgba(0,0,0,.8);
+
+   
+
+    & .leftBlock {
+        color: #f7f7f7;
+
+        & h3 {
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            border-bottom: solid #f7931e;
+            width: 20vw;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        /* list-style-image: url('../images/check-mark.png'); */
+        & ul {
+
+            list-style-type: none;
+
+            /* & li {
+                font-size: 1rem;
+            } */
+          
+          }
+          
+          
+          & ul li:before {
+            content: '';
+            display: inline-block;
+            height: 1.5rem;
+            width: 1.5rem;
+            background-size: 1.5rem;
+            background-image: url('../images/check-mark.png');
+            background-repeat: no-repeat;
+            top: 0.25rem;
+            margin-right: 0.5rem;
+            position: relative;
+          }
+    }
+    
+    & .rightBlock {
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 200px);
+    grid-gap: 0.8rem;
+    grid-auto-flow: dense;
+    background: #f7f7f7;
+    padding: 0.8rem;
+    @media (--narrow-menu-query) {
+        grid-template-rows: repeat(3, 150px);
+
+    }
+    & amp-img:nth-child(1),
+    & amp-img:nth-child(3),
+    & amp-img:nth-child(4) {
+        grid-column: span 1; /* Spans two columns */
+        grid-row: span 1; /* Spans two rows */
+        
+        }
+
+    & amp-img:nth-child(2) {
+    grid-column: span 1; /* Spans two columns */
+    grid-row: span 3; /* Spans two rows */
+    }
+  }
+
+  @media (--narrow-menu-query) {
+    grid-template-columns: 1fr;
+    & .leftBlock {
+        & h3 {
+        width: 80vw;
+    }
+        & ul {
+            margin-left: 0;
+        }
+}
+}
+}
