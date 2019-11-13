@@ -20,8 +20,8 @@ wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
 	<main id="primary" class="site-main">
-	
-	<?php get_template_part( 'template-parts/content/contact' ); ?>
+
+	<?php get_template_part( 'template-parts/content/contactBlock' ); ?>
 	</main><!-- #primary -->
 <?php
 get_footer();

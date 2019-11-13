@@ -1,14 +1,14 @@
 .block1 {
-    background: rgba(0,0,0,.8);
+    /* background: rgba(0,0,0,.8); */
     padding: 2rem;
-    color: #f7f7f7;
+    color: #222;
     margin-top: 4rem;
 
     & h3 {
         font-size: 1.8rem;
         font-weight: 400;
         text-align: center;
-        border-bottom: solid #f7931e;
+        border-bottom: solid #9EE400;
         width: 55%;
         margin-left: auto;
         margin-right: auto;
@@ -42,7 +42,7 @@
     }
 
     & button {
-        border: 1px solid #f7931e;
+        border: 1px solid #9EE400;
         border-radius: 1rem;
         width: 30vw;
         margin-left: 33vw;
@@ -52,7 +52,7 @@
         font-feature-settings: "smcp" 1;
         font-variant-caps: all-small-caps;
         margin-bottom: 0;
-        background: #f7931e;
+        background: #9EE400;
         color: #f7f7f7;
         font-size: 1.2rem;
         padding-bottom: 0.8em;

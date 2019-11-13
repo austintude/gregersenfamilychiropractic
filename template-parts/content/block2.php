@@ -31,7 +31,7 @@ $service_offered = get_sub_field('service_offered');
 	</ul>
 	<h4><?php echo $services_tag; ?></h4>
 	</div>
-	<a href="/gallery" rel="noopener noreferrer">
+	<!-- <a href="/gallery" rel="noopener noreferrer"> -->
 	<div class="rightBlock">
 	<?php while (have_rows('service_images')) : the_row();
 
@@ -39,17 +39,17 @@ $service_offered = get_sub_field('service_offered');
 $service_image = get_sub_field('service_image');
 ?>
 
-		<amp-img 
+		<amp-img
   src="<?php echo $service_image['url']; ?>"
   width="200"
 			height="200"
 			layout="responsive"
 			alt="<?php echo $service_image['alt']; ?>">
-		</amp-img>	
+		</amp-img>
 
 		<?php endwhile; ?>
-		
+
 	</div>
-	</a>
+	<!-- </a> -->
 </div>
 

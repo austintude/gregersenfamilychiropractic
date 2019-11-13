@@ -18,7 +18,7 @@ $testimonials_block_title			= get_field('testimonials_block_title');
 </div>
     <ol class="testimonialsList testimonialsList">
         <!-- insert acf sub-repeater here -->
-        
+
   <?php while (have_rows('testimonial_quotes')) : the_row();
 
 // vars
@@ -36,30 +36,32 @@ $overall = get_sub_field('overall');
                       <?php echo $testimonial_quote; ?>
                     </p>
 </span>
-                    <?php if ($description_of_work != null) { ?>
+                    <?php if ($overall != null) { ?>
                     <div class="testimonialContentBlocks">
-                        <div class="leftBlock">
+					<?php if ($description_of_work != null) { ?>
+						<div class="leftBlock">
                             <h5><?php echo $description_of_work; ?></h5>
-                        </div>
+						</div>
+					<?php } ?>
                         <div class="rightBlock">
                             <ul>
                                 <li>
                                     <div class="leftItem">
-                                    Star Rating: 
+                                    Star Rating:
                                     </div>
                                     <div class="rightItem">
                                     <span class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                                         <meta itemprop="worstRating" content="0">
                                             <span itemprop="ratingValue">
                                             <?php echo $overall; ?>
-                                            </span> / 
+                                            </span> /
                                             <span itemprop="bestRating">
-                                            <?php echo $overall; ?> 
+                                            <?php echo $overall; ?>
                                                 </span>
                                     </span>
                                         </div>
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -69,17 +71,17 @@ $overall = get_sub_field('overall');
                 <cite class="testimonialsQuote">
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <?php echo $testimonial_author; ?>
-                    </span> - 
+                    </span> -
                     <meta itemprop="datePublished" content="<?php echo $testimonial_date; ?>">
                     <span class="testimonialDate">
                         <?php echo $testimonial_date; ?>
                     </span>
 
                 </cite>
-                
+
             </blockquote>
-            
-                
+
+
             </li>
             <?php endwhile; ?>
 

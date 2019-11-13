@@ -20,11 +20,11 @@ wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
 	<main id="primary" class="site-main">
-		<?php 
+		<?php
 			get_template_part( 'template-parts/content/facebookTestimonial' );
 			get_template_part( 'template-parts/content/testimonialQuotes' );
 		?>
-		
+
 	</main><!-- #primary -->
 <?php
 get_footer();

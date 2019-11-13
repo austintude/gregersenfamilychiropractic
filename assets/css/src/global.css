@@ -418,7 +418,7 @@ select {
 		content: "";
 		display: block;
 		height: 4px;
-		background: linear-gradient(90deg, #711EAF 0, #db00ca);
+		background: linear-gradient(90deg, rgb(30, 175, 30) 0, #12db00);
 	}
 }
 

@@ -15,7 +15,9 @@ namespace WP_Rig\WP_Rig;
 			$contact_us_state			= get_field('contact_us_state');
 			$contact_us_zip			= get_field('contact_us_zip');
 			$contact_us_open_datetime			= get_field('contact_us_open_datetime');
+			$contact_us_open_datetime_extra			= get_field('contact_us_open_datetime_extra');
 			$contact_us_open_days_times			= get_field('contact_us_open_days_times');
+			$contact_us_open_days_times_extra			= get_field('contact_us_open_days_times_extra');
 			$contact_us_closed			= get_field('contact_us_closed');
 			$contact_us_form			= get_field('contact_us_form');
 			$cta_loading_image			= get_field('cta_loading_image');
@@ -24,15 +26,16 @@ namespace WP_Rig\WP_Rig;
 			$facebook_link			= get_field('facebook_link');
 			$instagram_link			= get_field('instagram_link');
 			$linkedin_link			= get_field('linkedin_link');
-			
+			$google_map			= get_field('google_map');
+
 ?>
 
 
 <div class="site-info">
-			
-			
 
-			
+
+
+
 
 	<div class="topBlock">
 		<div class="leftBlock" vocab="http://schema.org/" typeof="LocalBusiness">
@@ -41,8 +44,8 @@ namespace WP_Rig\WP_Rig;
 		<h4>Contact Information</h4>
 </div>
 		<section id="physical">
-	
-        <div id="address">		
+
+        <div id="address">
             <address property="address" typeof="PostalAddress">
 			<h5><?php bloginfo( 'name' ); ?></h5>
 			<h5><span property="streetAddress"><?php echo $contact_us_street; ?>
@@ -50,7 +53,7 @@ namespace WP_Rig\WP_Rig;
 		<?php echo $contact_us_street_suite; ?></span>
             <br>
             <span property="addressLocality"><?php echo $contact_us_city; ?></span>,
-            
+
 			<span property="addressRegion"><?php echo $contact_us_state; ?></span> <?php echo $contact_us_zip; ?></h5>
 </address>
         </div>
@@ -62,20 +65,25 @@ namespace WP_Rig\WP_Rig;
 	<h4>Hours of Operation</h4>
 			<ul>
 				<li>
-				<time itemprop="openingHours" datetime="<?php echo $contact_us_form; ?>"><?php echo $contact_us_open_days_times; ?></time>
+				<time itemprop="openingHours" datetime="<?php echo $contact_us_open_datetime; ?>"><?php echo $contact_us_open_days_times; ?></time>
 				</li>
-				
+				<?php if ($contact_us_open_datetime_extra != null) { ?>
+				<li>
+				<time itemprop="openingHours" datetime="<?php echo $contact_us_open_datetime_extra; ?>"><?php echo $contact_us_open_days_times_extra; ?></time>
+				</li>
+				<?php } ?>
+
 				<li>
 				 <?php echo $contact_us_closed; ?> - Closed
 				</li>
 			</ul>
-			
+
         </div>
         <div id="googleMap">
-        <amp-iframe width="600" height="450" layout="responsive" 
-			  sandbox="allow-scripts allow-same-origin allow-popups" 
-			  frameborder="0" 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0376164090367!2d-98.09668328514965!3d29.978348928647492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b5e7c4b29c899%3A0xadcdae56de2751d3!2sRoad%20And%20Track%20Specialists!5e0!3m2!1sen!2sus!4v1569848062009!5m2!1sen!2sus">
+        <amp-iframe width="600" height="450" layout="responsive"
+			  sandbox="allow-scripts allow-same-origin allow-popups"
+			  frameborder="0"
+              src="<?php echo $google_map; ?>">
     <amp-img layout="fill"
              src="<?php echo get_template_directory_uri() ?>/assets/images/Google-Map-Supreme.jpg"
 			 placeholder>
@@ -91,7 +99,7 @@ namespace WP_Rig\WP_Rig;
 	<div id="supremeSocial">
 		<div id="socialIcon1">
 			<a href="<?php echo $facebook_link; ?>" rel="noopener" target="_blank">
-			<amp-img 
+			<amp-img
 				src="<?php echo get_template_directory_uri() ?>/assets/images/facebook-icon.png"
 				width="1"
 				height="1"
@@ -100,9 +108,9 @@ namespace WP_Rig\WP_Rig;
 			</amp-img>
 </a>
 		</div>
-		<div id="socialIcon2">
+		<!-- <div id="socialIcon2">
 		<a href="<?php echo $instagram_link; ?>" rel="noopener" target="_blank">
-			<amp-img 
+			<amp-img
 				src="<?php echo get_template_directory_uri() ?>/assets/images/instagram-icon.png"
 				width="1"
 				height="1"
@@ -113,7 +121,7 @@ namespace WP_Rig\WP_Rig;
 		</div>
 		<div id="socialIcon3">
 		<a href="<?php echo $linkedin_link; ?>" rel="noopener" target="_blank">
-			<amp-img 
+			<amp-img
 				src="<?php echo get_template_directory_uri() ?>/assets/images/Yelp-icon.png"
 				width="1"
 				height="1"
@@ -121,7 +129,7 @@ namespace WP_Rig\WP_Rig;
 				alt="linkedin icon">
 			</amp-img>
 </a>
-		</div>
+		</div> -->
 </div>
 </div>
 </div>
@@ -138,14 +146,14 @@ $middle_image_1_alt = get_sub_field('middle_image_1_alt');
 $middle_image_2 = get_sub_field('middle_image_2');
 $middle_image_2_alt = get_sub_field('middle_image_2_alt');
 ?>
-		<amp-img 
+		<amp-img
 		src="<?php echo $middle_image_1; ?>"
   width="640"
 			height="640"
 			layout="intrinsic"
 			alt="<?php echo $middle_image_1_alt; ?>">
 		</amp-img>
-		<amp-img 
+		<amp-img
 		src="<?php echo $middle_image_2; ?>"
   width="640"
 			height="640"
@@ -168,14 +176,14 @@ $right_image_1_alt = get_sub_field('right_image_1_alt');
 $right_image_2 = get_sub_field('right_image_2');
 $right_image_2_alt = get_sub_field('right_image_2_alt');
 ?>
-		<amp-img 
+		<amp-img
 		src="<?php echo $right_image_1; ?>"
   width="640"
 			height="640"
 			layout="intrinsic"
 			alt="<?php echo $right_image_1_alt; ?>">
 		</amp-img>
-		<amp-img 
+		<amp-img
 		src="<?php echo $right_image_2; ?>"
   width="640"
 			height="640"

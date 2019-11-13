@@ -1,22 +1,53 @@
 .page-template-contact {
-   
-    & #ctaBlock {
-        background: transparent;
-        & a {
+
+    & #contactUsBlock {
+        padding-top: 10rem;
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+        grid-gap: 2rem;
+
+        & .leftBlock,
+        & .rightBlock {
+            width:95%;
+            margin-left: auto;
+            margin-right: auto;
+            @media (--ipad-landscape-plus-menu-query) {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        & .leftBlock {
+            & #googleMap {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    & .rightBlock {
+        margin-left: -1rem;
+    }
+
+        & #phone a {
+            color: #333;
             text-decoration: none;
-            color: #fff;
+            font-size: 1rem;
         }
-        & a:hover {
-            color: #fff;
-        }
-        
-        
-        & .contactForm {
-            display: grid;
-            justify-content: center;
+
+        & ul {
+            margin: 0 0 1.5em 1em;
+
+            & li {
+                font-size: 1rem;
+                list-style: none;
+            }
         }
     }
     @media (--narrow-portrait-menu-query) {
-        
+   & #contactUsBlock .rightBlock {
+        margin-left: 0rem;
+        padding-right: 2rem;
     }
+}
 }
