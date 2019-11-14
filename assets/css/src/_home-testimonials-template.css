@@ -59,7 +59,7 @@
             margin-right: auto;
             justify-content: center;
             @media (--narrow-portrait-menu-query) {
-                margin-top: -6rem;
+                margin-top: -2rem;
             }
 
             & button {

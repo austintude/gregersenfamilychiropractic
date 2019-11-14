@@ -1,5 +1,7 @@
 /* Appended for Austintatious Design's client */
-
+.header-image amp-img img {
+    min-width: 100vw;
+}
 .site {
     background: #f7f7f7;
 }
@@ -124,6 +126,12 @@ figcaption {
 #subscribe {
 	grid-area: subscribe;
 }
+.site-footer {
+	margin: 1em 0 0;
+	padding: 2em 0;
+	font-family: var(--highlight-font-family);
+	font-stretch: condensed;
+}
 
 .site-footer {
 	display: flex;
@@ -146,7 +154,8 @@ figcaption {
 		color: rgba(0,0,0,0.4);
 		text-decoration: none;
 	}
-	& .builtBy a {
+	& .builtBy a,
+	& .builtBy a:visited {
 		color: rgba(0,0,0,0.3);
 	}
 
@@ -301,7 +310,7 @@ figcaption {
 		top: 3em;
 		right: 0;
 		position: fixed;
-		background: rgba(255, 255, 255, 0.7);
+		background: rgba(255, 255, 255, 0.9);
 		z-index: 6;
 	}
 
@@ -557,7 +566,7 @@ figcaption {
 		top: 3em;
 		right: 0;
 		position: fixed;
-		background: rgba(255, 255, 255, 0.7);
+		background: rgba(255, 255, 255, 0.9);
 		z-index: 6;
 	}
 
@@ -779,7 +788,7 @@ figcaption {
 @media (--narrow-portrait-menu-query) {
 
 	.custom-logo {
-		width: 12em;
+		width: 6.4em;
 	}
 
 	#carouselHero,
@@ -903,7 +912,7 @@ figcaption {
 		top: 3em;
 		right: 0;
 		position: fixed;
-		background: rgba(255, 255, 255, 0.7);
+		background: rgba(255, 255, 255, 0.9);
 		z-index: 6;
 	}
 
@@ -917,7 +926,7 @@ figcaption {
 	}
 
 	#mobileTopBar {
-		height: 3.55rem;
+		height: 6.55rem;
 		position: fixed;
 		top: 0;
 		width: 100vw;
@@ -967,6 +976,9 @@ figcaption {
 	main {
 		top:-8rem;
 		position: relative;
+		/* margin-left: auto;
+    margin-right: auto;
+    width: 80vw; */
 	}
 	#subscribe {
 		display: flex;
@@ -1022,6 +1034,7 @@ figcaption {
 		.site-footer {
 			margin-top: -5rem;
 
+
 		& .site-info {
 			margin: 0 auto;
 			width: 100vw;
@@ -1052,6 +1065,7 @@ figcaption {
 			position: relative;
 			/* width: 50vw; */
 		}
+
 	}
 
 	/* Template Page mods begin */
@@ -1082,6 +1096,38 @@ figcaption {
 }
 
 @media (--large-desktop-query) {
+
+	main {
+		top:-8rem;
+		position: relative;
+		margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+	}
+
+		.site-footer {
+			margin-top: -5rem;
+			margin-left: auto;
+			margin-right: auto;
+			width: 80vw;
+
+		& .site-info {
+			margin: 0 auto;
+			/* width: 100vw; */
+			max-width: 80vw;
+		}
+
+
+		& .baseBlock {
+			bottom: 0;
+			position: absolute;
+			width: 80vw;
+
+			& .builtBy {
+				width: 80vw;
+			}
+		}
+	}
 
 	.site-branding {
 		& .site-title {
