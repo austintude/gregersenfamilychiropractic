@@ -8,7 +8,11 @@
 
         @media (--narrow-menu-query) {
             min-height: 35rem;
-            max-height: 35rem;
+			max-height: 35rem;
+
+			& .testimonialsBlockTitle {
+				margin-bottom: 4rem;
+			}
         }
 
         & h2 {
@@ -155,7 +159,10 @@
             padding: 2em;
             margin: 0 0 1rem 0;
             transition: box-shadow 0.2s ease-in-out;
-            position: relative;
+			position: relative;
+			@media (--narrow-menu-query) {
+				border-radius: .5rem 2rem 2rem .5rem;
+			}
         }
 
         & .blockquote p:before {
@@ -173,7 +180,7 @@
 
     & .testimonialsCard .testimonialsContent:after {
         content: '';
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0,0,0,.4);
         position: absolute;
         width: 1rem;
         height: 1rem;

@@ -7,6 +7,12 @@
 	color: #fff;
 	font-weight: 300;
 	text-shadow: 1px 3px #000;
+	@media (--narrow-menu-query) {
+	top: 3rem;
+    width: 80%;
+	margin-left: 10%;
+	font-size: 2rem;
+	}
 }
 .tagline {
 	color: #fff;
@@ -15,12 +21,20 @@
 	margin-right: auto;
 	font-weight: 300;
 	text-shadow: 1px 1px #000;
+	@media (--narrow-menu-query) {
+		width: 78%;
+    margin-left: 11%;
+    font-size: 1.4rem;
+	}
 }
 .titleTagWrapper {
 position: relative;
     margin-top: -36rem;
     text-align: left;
 	width: 100vw;
+	@media (--narrow-menu-query) {
+		margin-top: -13rem;
+	}
 }
 .has-sidebar	.site {
 	margin: 0;
@@ -806,6 +820,7 @@ figcaption {
 		top: 3rem;
 		width: 80%;
 		margin-left: 10%;
+		font-size: 2rem;
 
 		& a {
 			font-size: 2rem;
