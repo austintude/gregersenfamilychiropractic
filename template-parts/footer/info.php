@@ -98,7 +98,7 @@ namespace WP_Rig\WP_Rig;
 
 	<div id="supremeSocial">
 		<div id="socialIcon1">
-			<a href="<?php echo $facebook_link; ?>" rel="noopener" target="_blank">
+			<a href="<?php echo $facebook_link; ?>">
 			<amp-img
 				src="<?php echo get_template_directory_uri() ?>/assets/images/facebook-icon.png"
 				width="1"
