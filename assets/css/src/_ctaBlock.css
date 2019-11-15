@@ -16,12 +16,12 @@
 	}
 }
 .secondLine {
-	color: #f7931e;
+	color: #f08001;
 	& button {
 		font-size:1.3rem;
 		background: #f7931e;
 		& a {
-			color: #f7f7f7;
+			color: #fff;
 			text-decoration: none;
 		}
 	}

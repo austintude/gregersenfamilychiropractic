@@ -151,7 +151,7 @@ figcaption {
 		font-size: 1rem;
 		line-height: 1rem;
 		font-weight: 400;
-		color: rgba(0,0,0,0.4);
+		color: rgba(0,0,0,0.8);
 		text-decoration: none;
 	}
 	& .builtBy a,
