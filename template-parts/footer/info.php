@@ -150,14 +150,14 @@ $middle_image_2_alt = get_sub_field('middle_image_2_alt');
 		src="<?php echo $middle_image_1; ?>"
   width="640"
 			height="640"
-			layout="intrinsic"
+			layout="responsive"
 			alt="<?php echo $middle_image_1_alt; ?>">
 		</amp-img>
 		<amp-img
 		src="<?php echo $middle_image_2; ?>"
   width="640"
 			height="640"
-			layout="intrinsic"
+			layout="responsive"
 			alt="<?php echo $middle_image_2_alt; ?>">
 		</amp-img>
 		<?php endwhile; ?>
@@ -180,14 +180,14 @@ $right_image_2_alt = get_sub_field('right_image_2_alt');
 		src="<?php echo $right_image_1; ?>"
   width="640"
 			height="640"
-			layout="intrinsic"
+			layout="responsive"
 			alt="<?php echo $right_image_1_alt; ?>">
 		</amp-img>
 		<amp-img
 		src="<?php echo $right_image_2; ?>"
   width="640"
 			height="640"
-			layout="intrinsic"
+			layout="responsive"
 			alt="<?php echo $right_image_2_alt; ?>">
 		</amp-img>
 		<?php endwhile; ?>

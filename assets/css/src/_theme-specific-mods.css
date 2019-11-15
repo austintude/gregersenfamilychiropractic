@@ -226,6 +226,13 @@ figcaption {
 				height: 100%;
 			}
 		}
+		@media (--ipad-portrait-menu-query) {
+			grid-template-columns: 200px 200px;
+		}
+		@media (--narrow-portrait-menu-query) {
+			grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+			grid-template-rows: repeat(1,200px);
+		}
 	}
 
 	& .middleBlock .row2,

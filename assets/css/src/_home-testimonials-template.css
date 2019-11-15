@@ -161,7 +161,7 @@
             transition: box-shadow 0.2s ease-in-out;
 			position: relative;
 			@media (--narrow-menu-query) {
-				border-radius: .5rem 2rem 2rem .5rem;
+				border-radius: none;
 			}
         }
 

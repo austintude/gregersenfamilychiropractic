@@ -184,7 +184,11 @@
 
 			& h4 {
 				margin-top: 0;
-				margin-left: 1rem;
+				margin-left: auto;
+				text-align: center;
+				justify-content: center;
+				/* width: 50vw; */
+				margin-right: auto;
 			}
 		}
 
@@ -237,9 +241,11 @@
 @media (--narrow-menu-query) {
 	#ctaBlock {
 		& #envelopeIcon h4 {
-		margin-top: 0;
-		margin-left: 1rem;
-		text-align: center;
+		    margin-top: 1.4rem;
+    margin-left: 1rem;
+    text-align: center;
+    justify-content: center;
+    margin-right: 1rem;
 	}
 	& #subscribe {
 		margin-top: 0;
